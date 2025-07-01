@@ -22,9 +22,9 @@ export const celulares = [
     precio: 1299,
     marcaId: 1,
     fotos: [
-      '/iphone-15-pro-max-1.jpg',
-      '/iphone-15-pro-max-2.jpg',
-      '/iphone-15-pro-max-3.jpg'
+      'img/iphone-15-pro-max-1.jpg',
+      'img/iphone-15-pro-max-2.jpg',
+      'img/iphone-15-pro-max-3.jpg'
     ],
     vendido: true
   },
