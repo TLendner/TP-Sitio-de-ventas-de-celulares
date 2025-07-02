@@ -27,7 +27,6 @@ const Productos = () => {
     const timer = setTimeout(() => {
       let productosFiltrados = [...celulares];
       
-      // Filtro por marca
       if (idMarca) {
         const marcaId = parseInt(idMarca);
         productosFiltrados = productosFiltrados.filter(p => p.marcaId === marcaId);
@@ -37,10 +36,8 @@ const Productos = () => {
         setMarcaSeleccionada(null);
       }
       
-      // Aplicar filtros adicionales
       productosFiltrados = aplicarFiltrosAdicionales(productosFiltrados);
       
-      // Ordenar productos
       productosFiltrados = ordenarProductos(productosFiltrados);
       
       setProductos(productosFiltrados);
@@ -52,11 +49,9 @@ const Productos = () => {
 
   const aplicarFiltrosAdicionales = (productos) => {
     return productos.filter(producto => {
-      // Filtro por precio
       if (filtros.precioMin && producto.precio < Number(filtros.precioMin)) return false;
       if (filtros.precioMax && producto.precio > Number(filtros.precioMax)) return false;
       
-      // Filtro por características (simulado)
       const descLower = producto.descripcion.toLowerCase();
       if (filtros.caracteristicas.resistenteAgua && !descLower.includes('resistente')) return false;
       if (filtros.caracteristicas.cargaRapida && !descLower.includes('carga rápida') && !descLower.includes('carga rapida')) return false;
@@ -77,7 +72,7 @@ const Productos = () => {
       case 'nombre-desc':
         return [...productos].sort((a, b) => b.nombre.localeCompare(a.nombre));
       default:
-        return productos; // relevancia (orden original)
+        return productos;
     }
   };
 
@@ -146,7 +141,6 @@ const Productos = () => {
       {mostrarFiltros && (
         <div className="bg-gray-900/50 p-6 rounded-xl border border-orange-500/20 mb-8 animate-fadeIn">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {/* Selector de marca */}
             <div>
               <label className="block text-white mb-2">Marca</label>
               <select
@@ -161,7 +155,6 @@ const Productos = () => {
               </select>
             </div>
             
-            {/* Rango de precios */}
             <div>
               <label className="block text-white mb-2">Rango de precio</label>
               <div className="flex gap-2">
@@ -184,7 +177,6 @@ const Productos = () => {
               </div>
             </div>
             
-            {/* Ordenar por */}
             <div>
               <label className="block text-white mb-2">Ordenar por</label>
               <select
@@ -201,7 +193,6 @@ const Productos = () => {
               </select>
             </div>
             
-            {/* Botón reset */}
             <div className="flex items-end">
               <button
                 onClick={resetFiltros}

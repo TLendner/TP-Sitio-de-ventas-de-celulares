@@ -1,10 +1,10 @@
 export const marcas = [
-  { id: 1, nombre: 'Apple', logo: '/apple-logo.png' },
-  { id: 2, nombre: 'Samsung', logo: '/samsung-logo.png' },
-  { id: 3, nombre: 'Xiaomi', logo: '/xiaomi-logo.png' },
-  { id: 4, nombre: 'Motorola', logo: '/motorola-logo.png' },
-  { id: 5, nombre: 'Google', logo: '/google-logo.png' },
-  { id: 6, nombre: 'OnePlus', logo: '/oneplus-logo.png' }
+  { id: 1, nombre: 'Apple', },
+  { id: 2, nombre: 'Samsung', },
+  { id: 3, nombre: 'Xiaomi', },
+  { id: 4, nombre: 'Motorola', },
+  { id: 5, nombre: 'Google', },
+  { id: 6, nombre: 'OnePlus', }
 ];
 
 export const celulares = [
@@ -14,7 +14,7 @@ export const celulares = [
     descripcion: 'El iPhone más avanzado con pantalla Super Retina XDR, chip A17 Pro, cámara de 48 MP y diseño de titanio.',
     caracteristicas: [
       'Pantalla 6.7" Super Retina XDR',
-      'Chip A17 Pro',
+            'Chip A17 Pro',
       'Cámara triple de 48MP + 12MP + 12MP',
       'Resistencia al agua IP68',
       'iOS 17'
@@ -22,9 +22,7 @@ export const celulares = [
     precio: 1299,
     marcaId: 1,
     fotos: [
-      'img/iphone-15-pro-max-1.jpg',
-      'img/iphone-15-pro-max-2.jpg',
-      'img/iphone-15-pro-max-3.jpg'
+      'https://galaxcell.com/wp-content/uploads/2024/07/iphone-15-pro-max-azul-titanio-vista-frontal-y-trasera.webp',
     ],
     vendido: true
   },
@@ -42,9 +40,7 @@ export const celulares = [
     precio: 1199,
     marcaId: 2,
     fotos: [
-      '/galaxy-s23-ultra-1.jpg',
-      '/galaxy-s23-ultra-2.jpg',
-      '/galaxy-s23-ultra-3.jpg'
+      'https://media.flixcar.com/webp/synd-asset/Samsung-116410186-ar-galaxy-s23-s918-446703-sm-s918bzgvaro-535074951--Download-Source--zoom.png',
     ],
     vendido: true
   },
@@ -62,9 +58,7 @@ export const celulares = [
     precio: 999,
     marcaId: 3,
     fotos: [
-      '/xiaomi-13-pro-1.jpg',
-      '/xiaomi-13-pro-2.jpg',
-      '/xiaomi-13-pro-3.jpg'
+      'https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1678361301.0778978.png',
     ],
     vendido: true
   },
@@ -82,9 +76,7 @@ export const celulares = [
     precio: 799,
     marcaId: 4,
     fotos: [
-      '/motorola-edge-40-pro-1.jpg',
-      '/motorola-edge-40-pro-2.jpg',
-      '/motorola-edge-40-pro-3.jpg'
+      'https://storage.comprasmartphone.com/smartphones/motorola-edge-40-pro.png'
     ]
   },
   {
@@ -101,9 +93,7 @@ export const celulares = [
     precio: 799,
     marcaId: 1,
     fotos: [
-      '/iphone-14-1.jpg',
-      '/iphone-14-2.jpg',
-      '/iphone-14-3.jpg'
+      'https://pladani.com/wp-content/uploads/2024/11/iphone-14-pro-max.webp',
     ]
   },
   {
@@ -120,9 +110,7 @@ export const celulares = [
     precio: 1799,
     marcaId: 2,
     fotos: [
-      '/galaxy-z-fold-5-1.jpg',
-      '/galaxy-z-fold-5-2.jpg',
-      '/galaxy-z-fold-5-3.jpg'
+      'https://media.flixcar.com/webp/synd-asset/Samsung-124868604-ar-galaxy-z-fold5-f946-sm-f946blblaro-537220514--Download-Source--zoom.png',
     ],
     vendido: true
   },
@@ -140,9 +128,7 @@ export const celulares = [
     precio: 399,
     marcaId: 3,
     fotos: [
-      '/redmi-note-12-pro-plus-1.jpg',
-      '/redmi-note-12-pro-plus-2.jpg',
-      '/redmi-note-12-pro-plus-3.jpg'
+      'https://comprasmartphone.com/_next/image?url=https%3A%2F%2Fstorage.comprasmartphone.com%2Fsmartphones%2Fxiaomi-redmi-note-12-pro.png&w=640&q=75',
     ]
   },
   {
@@ -159,9 +145,7 @@ export const celulares = [
     precio: 999,
     marcaId: 4,
     fotos: [
-      '/motorola-razr-40-ultra-1.jpg',
-      '/motorola-razr-40-ultra-2.jpg',
-      '/motorola-razr-40-ultra-3.jpg'
+      'https://motoecuador.vtexassets.com/arquivos/ids/156522/168206-1200-auto.png?v=638440447425970000',
     ],
     vendido: true
   },
@@ -179,9 +163,7 @@ export const celulares = [
     precio: 999,
     marcaId: 5,
     fotos: [
-      '/pixel-8-pro-1.jpg',
-      '/pixel-8-pro-2.jpg',
-      '/pixel-8-pro-3.jpg'
+      'https://storage.comprasmartphone.com/smartphones/google-pixel-8-pro.png',
     ],
     vendido: true
   },
@@ -199,9 +181,7 @@ export const celulares = [
     precio: 699,
     marcaId: 6,
     fotos: [
-      '/oneplus-11-1.jpg',
-      '/oneplus-11-2.jpg',
-      '/oneplus-11-3.jpg'
+      'https://oasis.opstatics.com/content/dam/oasis/page/2023/in/product/11/marble.png',
     ]
   }
 ];

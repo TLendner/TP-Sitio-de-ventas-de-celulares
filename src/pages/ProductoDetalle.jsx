@@ -58,27 +58,6 @@ const ProductoDetalle = () => {
                 }}
               />
             </div>
-            
-            <div className="grid grid-cols-4 gap-2">
-              {celular.fotos.map((foto, index) => (
-                <button
-                  key={index}
-                  onClick={() => setImagenPrincipal(foto)}
-                  className={`h-20 bg-gray-800 rounded-md overflow-hidden transition-all ${
-                    imagenPrincipal === foto ? 'ring-2 ring-blue-500' : 'hover:ring-1 hover:ring-gray-300'
-                  }`}
-                >
-                  <img 
-                    src={foto} 
-                    alt={`Vista ${index + 1}`} 
-                    className="h-full w-full object-cover"
-                    onError={(e) => {
-                      e.target.src = 'https://via.placeholder.com/150x150?text=Imagen';
-                    }}
-                  />
-                </button>
-              ))}
-            </div>
           </div>
           
           <div className="md:w-1/2 p-6">

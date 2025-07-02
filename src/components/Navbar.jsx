@@ -1,10 +1,6 @@
-import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { marcas } from '../data/Js_data';
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isBrandsOpen, setIsBrandsOpen] = useState(false);
 
   return (
     <nav className="bg-black border-b border-orange-500/20">
