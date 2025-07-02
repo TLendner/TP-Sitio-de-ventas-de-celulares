@@ -10,7 +10,6 @@ const Navbar = () => {
     <nav className="bg-black border-b border-orange-500/20">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link 
             to="/" 
             className="flex items-center space-x-2 group"
@@ -23,7 +22,6 @@ const Navbar = () => {
             </span>
           </Link>
 
-          {/* Menú Desktop */}
           <div className="hidden md:flex items-center space-x-8">
             <NavLink 
               to="/" 

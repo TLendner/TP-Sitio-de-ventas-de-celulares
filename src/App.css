@@ -4,7 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Animaciones personalizadas */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -21,12 +20,10 @@
   }
 }
 
-/* Estilos base */
 body {
   @apply bg-dark text-light font-sans;
 }
 
-/* Componentes personalizados */
 .btn-primary {
   @apply bg-primary hover:bg-accent text-dark font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-primary/30;
 }
@@ -39,7 +36,6 @@ body {
   @apply text-4xl md:text-5xl font-title text-primary mb-6;
 }
 
-/* Efecto de brillo al hover */
 .hover-glow:hover {
   box-shadow: 0 0 15px rgba(255, 107, 53, 0.5);
 }
