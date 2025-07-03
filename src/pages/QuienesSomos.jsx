@@ -59,16 +59,16 @@ const QuienesSomos = () => {
           <h2 className="text-2xl font-bold mb-6 text-orange-500">El Equipo</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Carlos Stanca", role: "Fundador & CEO", bio: "Visionario tecnológico con más de 15 años en el sector." },
-              { name: "María Aliados", role: "Directora de Diseño", bio: "Especialista en experiencia de usuario y diseño de interfaces." },
-              { name: "Luis Polshetta", role: "CTO", bio: "Experto en hardware y desarrollo de sistemas móviles." }
+              { nombre: "Carlos Stanca", rol: "Fundador & CEO", bio: "Visionario tecnológico con más de 15 años en el sector." },
+              { nombre: "María Aliados", rol: "Directora de Diseño", bio: "Especialista en experiencia de usuario y diseño de interfaces." },
+              { nombre: "Luis Polshetta", rol: "CTO", bio: "Experto en hardware y desarrollo de sistemas móviles." }
             ].map((member, index) => (
               <div key={index} className="bg-black/50 p-6 rounded-lg border border-orange-500/10 hover:border-orange-500/30 transition-all group">
                 <div className="w-16 h-16 bg-orange-500 rounded-full mb-4 flex items-center justify-center text-2xl font-bold text-black group-hover:rotate-12 transition-transform">
-                  {member.name.split(' ').map(n => n[0]).join('')}
+                  {member.nombre.split(' ').map(n => n[0]).join('')}
                 </div>
-                <h3 className="text-xl font-bold">{member.name}</h3>
-                <p className="text-orange-500 mb-2">{member.role}</p>
+                <h3 className="text-xl font-bold">{member.nombre}</h3>
+                <p className="text-orange-500 mb-2">{member.rol}</p>
                 <p className="text-gray-400">{member.bio}</p>
               </div>
             ))}

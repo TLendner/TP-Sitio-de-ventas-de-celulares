@@ -25,11 +25,11 @@ const Contacto = () => {
     }));
     
     if (errors[name]) {
-      validateField(name, value);
+      validar(name, value);
     }
   };
 
-  const validateField = (name, value) => {
+  const validar = (name, value) => {
     let error = '';
     
     switch (name) {
@@ -60,13 +60,13 @@ const Contacto = () => {
     return !error;
   };
 
-  const validateForm = () => {
+  const validarForm = () => {
     const newErrors = {};
     let isValid = true;
     
     Object.keys(formData).forEach(key => {
       if (key !== 'telefono') {
-        const fieldValid = validateField(key, formData[key]);
+        const fieldValid = validar(key, formData[key]);
         if (!fieldValid) isValid = false;
       }
     });
@@ -77,7 +77,7 @@ const Contacto = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    if (validateForm()) {
+    if (validarForm()) {
       setIsSubmitting(true);
       
       setTimeout(() => {
@@ -196,7 +196,7 @@ const Contacto = () => {
                     name="nombre"
                     value={formData.nombre}
                     onChange={handleChange}
-                    onBlur={(e) => validateField(e.target.name, e.target.value)}
+                    onBlur={(e) => validar(e.target.name, e.target.value)}
                     className={`w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 ${errors.nombre ? 'focus:ring-red-500 border-red-500/50' : 'focus:ring-orange-500 border-gray-700'}`}
                   />
                   {errors.nombre && <p className="mt-1 text-sm text-red-500">{errors.nombre}</p>}
@@ -210,7 +210,7 @@ const Contacto = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    onBlur={(e) => validateField(e.target.name, e.target.value)}
+                    onBlur={(e) => validar(e.target.name, e.target.value)}
                     className={`w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 ${errors.email ? 'focus:ring-red-500 border-red-500/50' : 'focus:ring-orange-500 border-gray-700'}`}
                   />
                   {errors.email && <p className="mt-1 text-sm text-red-500">{errors.email}</p>}
@@ -224,7 +224,7 @@ const Contacto = () => {
                     name="telefono"
                     value={formData.telefono}
                     onChange={handleChange}
-                    onBlur={(e) => validateField(e.target.name, e.target.value)}
+                    onBlur={(e) => validar(e.target.name, e.target.value)}
                     className={`w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 ${errors.telefono ? 'focus:ring-red-500 border-red-500/50' : 'focus:ring-orange-500 border-gray-700'}`}
                   />
                   {errors.telefono && <p className="mt-1 text-sm text-red-500">{errors.telefono}</p>}
@@ -238,7 +238,7 @@ const Contacto = () => {
                     rows="5"
                     value={formData.mensaje}
                     onChange={handleChange}
-                    onBlur={(e) => validateField(e.target.name, e.target.value)}
+                    onBlur={(e) => validar(e.target.name, e.target.value)}
                     className={`w-full px-4 py-3 bg-gray-800 rounded-lg focus:outline-none focus:ring-2 ${errors.mensaje ? 'focus:ring-red-500 border-red-500/50' : 'focus:ring-orange-500 border-gray-700'}`}
                   ></textarea>
                   {errors.mensaje && <p className="mt-1 text-sm text-red-500">{errors.mensaje}</p>}

@@ -65,7 +65,7 @@ const Productos = () => {
     }
   };
 
-  const handleFiltroChange = (e) => {
+  const CambioFiltro = (e) => {
     const { name, value} = e.target;
       setFiltros(prev => ({
         ...prev,
@@ -81,7 +81,7 @@ const Productos = () => {
     });
   };
 
-  const handleMarcaChange = (e) => {
+  const CambioMarca = (e) => {
     const marcaId = e.target.value;
     if (marcaId === 'todas') {
       navigate('/productos');
@@ -118,7 +118,7 @@ const Productos = () => {
               <label className="block text-white mb-2">Marca</label>
               <select
                 value={idMarca || 'todas'}
-                onChange={handleMarcaChange}
+                onChange={CambioMarca}
                 className="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-2 focus:ring-orange-500 focus:border-orange-500"
               >
                 <option value="todas">Todas las marcas</option>
@@ -136,7 +136,7 @@ const Productos = () => {
                   placeholder="Mínimo"
                   name="precioMin"
                   value={filtros.precioMin}
-                  onChange={handleFiltroChange}
+                  onChange={CambioFiltro}
                   className="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-3 py-2 focus:ring-orange-500 focus:border-orange-500"
                 />
                 <input
@@ -144,7 +144,7 @@ const Productos = () => {
                   placeholder="Máximo"
                   name="precioMax"
                   value={filtros.precioMax}
-                  onChange={handleFiltroChange}
+                  onChange={CambioFiltro}
                   className="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-3 py-2 focus:ring-orange-500 focus:border-orange-500"
                 />
               </div>
@@ -155,7 +155,7 @@ const Productos = () => {
               <select
                 name="orden"
                 value={filtros.orden}
-                onChange={handleFiltroChange}
+                onChange={CambioFiltro}
                 className="w-full bg-gray-800 border border-gray-700 text-white rounded-lg px-4 py-2 focus:ring-orange-500 focus:border-orange-500"
               >
                 <option value="relevancia">Relevancia</option>
