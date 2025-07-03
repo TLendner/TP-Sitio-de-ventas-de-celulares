@@ -12,11 +12,6 @@ const Productos = () => {
   const [filtros, setFiltros] = useState({
     precioMin: '',
     precioMax: '',
-    caracteristicas: {
-      resistenteAgua: false,
-      cargaRapida: false,
-      camaraPro: false
-    },
     orden: 'relevancia'
   });
   const [mostrarFiltros, setMostrarFiltros] = useState(false);
@@ -51,12 +46,6 @@ const Productos = () => {
     return productos.filter(producto => {
       if (filtros.precioMin && producto.precio < Number(filtros.precioMin)) return false;
       if (filtros.precioMax && producto.precio > Number(filtros.precioMax)) return false;
-      
-      const descLower = producto.descripcion.toLowerCase();
-      if (filtros.caracteristicas.resistenteAgua && !descLower.includes('resistente')) return false;
-      if (filtros.caracteristicas.cargaRapida && !descLower.includes('carga rápida') && !descLower.includes('carga rapida')) return false;
-      if (filtros.caracteristicas.camaraPro && !descLower.includes('cámara pro') && !descLower.includes('camara pro')) return false;
-      
       return true;
     });
   };
@@ -77,33 +66,17 @@ const Productos = () => {
   };
 
   const handleFiltroChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    
-    if (type === 'checkbox') {
-      setFiltros(prev => ({
-        ...prev,
-        caracteristicas: {
-          ...prev.caracteristicas,
-          [name]: checked
-        }
-      }));
-    } else {
+    const { name, value} = e.target;
       setFiltros(prev => ({
         ...prev,
         [name]: value
       }));
-    }
   };
 
   const resetFiltros = () => {
     setFiltros({
       precioMin: '',
       precioMax: '',
-      caracteristicas: {
-        resistenteAgua: false,
-        cargaRapida: false,
-        camaraPro: false
-      },
       orden: 'relevancia'
     });
   };

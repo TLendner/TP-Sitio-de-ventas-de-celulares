@@ -21,7 +21,6 @@ const ProductoDetalle = () => {
     if (producto) {
       setCelular(producto);
       setImagenPrincipal(producto.fotos[0] || 'https://via.placeholder.com/600x600?text=Imagen+no+disponible');
-      
       const marcaProducto = marcas.find(m => Number(m.id) === Number(producto.marcaId));
       setMarca(marcaProducto);
     }

@@ -22,7 +22,7 @@ const Navbar = () => {
             <NavLink 
               to="/" 
               className={({ isActive }) => 
-                `text-white hover:text-orange-400 transition-colors font-medium ${isActive ? 'text-orange-500' : ''}`
+                `text-white hover:text-orange-400 transition-colors font-medium ${isActive ? 'text-orange-700' : ''}`
               }
             >
               Inicio
@@ -31,7 +31,7 @@ const Navbar = () => {
             <NavLink 
               to="/productos" 
               className={({ isActive }) => 
-                `text-white hover:text-orange-400 transition-colors font-medium ${isActive ? 'text-orange-500' : ''}`
+                `text-white hover:text-orange-400 transition-colors font-medium ${isActive ? 'text-orange-700' : ''}`
               }
             >
               Productos
@@ -40,7 +40,7 @@ const Navbar = () => {
             <NavLink 
               to="/quienes-somos" 
               className={({ isActive }) => 
-                `text-white hover:text-orange-400 transition-colors font-medium ${isActive ? 'text-orange-500' : ''}`
+                `text-white hover:text-orange-400 transition-colors font-medium ${isActive ? 'text-orange-700' : ''}`
               }
             >
               Quiénes Somos
@@ -49,7 +49,7 @@ const Navbar = () => {
             <NavLink 
               to="/contacto" 
               className={({ isActive }) => 
-                `text-white hover:text-orange-400 transition-colors font-medium ${isActive ? 'text-orange-500' : ''}`
+                `text-white hover:text-orange-400 transition-colors font-medium ${isActive ? 'text-orange-700' : ''}`
               }
             >
               Contacto
